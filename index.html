@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>חוברת הסברה - קריית ההדרכה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Assistant', 'Roboto', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Assistant', sans-serif;
+      }
+      html[lang="ru"] body, html[lang="en"] body, html[lang="am"] body {
+        font-family: 'Roboto', sans-serif;
+      }
+      .prose {
+        text-align: right;
+      }
+      html[dir="ltr"] .prose {
+        text-align: left;
+      }
+      /* Custom scrollbar for a more modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; /* stone-100 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a3a3a3; /* stone-400 */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #78716c; /* stone-500 */
+      }
+      /* Initial loader style */
+      #initial-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8fafc; /* stone-50 */
+      }
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.11.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root">
+       <div id="initial-loader">
+         <div class="w-16 h-16 border-4 border-lime-500 border-dashed rounded-full animate-spin"></div>
+       </div>
+    </div>
+    <script type="module" src="./src/index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
