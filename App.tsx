@@ -10,8 +10,6 @@ import { MenuIcon } from './components/Icons';
 import { useLanguage } from './contexts/LanguageContext';
 
 
-
-
 function App() {
   const [activeSection, setActiveSection] = useState<string>('intro');
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
